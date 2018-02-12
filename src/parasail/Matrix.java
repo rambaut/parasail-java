@@ -13,7 +13,12 @@ public class Matrix {
         System.out.println(JNIparasail.matrix_min(Matrix.getCPtr(Matrix.blosum100)));
         System.out.println(Arrays.toString(JNIparasail.matrix_data(Matrix.getCPtr(Matrix.blosum62))));
         Matrix made = Matrix.create("asdf", 2, -1);
-        System.out.println(Arrays.toString(JNIparasail.matrix_data(Matrix.getCPtr(made))));
+        System.out.println(Arrays.toString(made.getData()));
+
+        // demonstrate setting a value
+        made.setValue(0, 0, 10);
+        System.out.println(Arrays.toString(made.getData()));
+        
         made.finalize();
     }
 
