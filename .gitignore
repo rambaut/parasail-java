@@ -13,3 +13,8 @@ hs_err_pid*
 
 # local cmake build directory
 build
+
+.idea/*
+*.ipr
+*.iml
+*.iws
